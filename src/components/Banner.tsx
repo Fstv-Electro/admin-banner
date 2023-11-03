@@ -1,7 +1,6 @@
 'use client'
 
 import mongoAPI from "@/app/api/mongoAPI";
-import useSWR from "swr";
 // import sectionsAPI from "@/app/api/api";
 
 
