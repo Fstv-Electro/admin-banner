@@ -1,4 +1,4 @@
-import Home from "@/app/Home/page"
+import Home from "@/app/Home/page";
 import Link from "next/link"
 
 

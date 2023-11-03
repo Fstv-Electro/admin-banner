@@ -2,17 +2,6 @@ import axios from "axios";
 
 const { NEXT_PUBLIC_STRAPI_URL, STRAPI_API_TOKEN_READONLY } = process.env;
 
-export async function fetcher(url: string, options = {}) {
-    let response;
-    if (!options) {
-        response = await fetch(url);
-    } else {
-        response = await fetch(url, options);
-    }
-    const data = await response.json();
-    return data;
-}
-
 const api = axios.create({
     baseURL: 'http://localhost:1337/api',
     headers: {'bearer': STRAPI_API_TOKEN_READONLY}
