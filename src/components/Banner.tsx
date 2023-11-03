@@ -16,7 +16,8 @@ function Sections() {
 
     const fetchData = async () => {
         try {
-            const res: any = await sectionsAPI.getAll()
+            const res: any = await sectionsAPI.getAll();
+            await sectionsAPI.getSections();
             
             setSections(res);
             setIsLoading(false)

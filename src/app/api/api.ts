@@ -26,6 +26,15 @@ const sectionsAPI = {
         } catch (error) {
             console.log(error)
         }
+    },
+    getSections: async () => {
+        try {
+            const res = await api.get(`/sections?populate[sections][populate]=image.data`);
+            console.log(res.data)
+            return res;
+        } catch (error) {
+            console.log(error)
+        }
     }
 };
 
