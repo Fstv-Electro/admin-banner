@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  experimental: {
-    appDir: true,
-    serverComponentsExternalPackages: ["mongoose"],
+  distDir: "dist",
+  images: {
+    unoptimized: true,
   },
 };
 
