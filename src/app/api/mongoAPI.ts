@@ -30,6 +30,7 @@ export default mongoAPI;
 
 const endpoint = '/api/users';
 const baseURL='http://fstv-electro.github.io/admin-banner'
+// const baseURL='http://localhost:3000'
 
 export const  fetchAll = async () => {
     try {

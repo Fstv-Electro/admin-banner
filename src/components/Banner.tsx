@@ -7,10 +7,11 @@ import { fetchAll, fetchById } from "@/app/api/mongoAPI";
 
 import React, { useEffect, useState } from "react";
 
+
 export type TUsers = {
     _id: string,
     name: string,
-    email:  string,
+    email: string,
     __v: number,
 }
 
@@ -21,11 +22,11 @@ export default function Sections() {
     const [isLoading, setLoading] = useState(true)
     const [user, setUser] = useState<any | null>(null)
 
- 
-  useEffect(() => {
-    fetchData()
-  }, [])
-    
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
     const fetchData = () => {
         fetchAll()
             .then((data) => {
@@ -43,7 +44,7 @@ export default function Sections() {
     if (!data) return <p>No profile data</p>
 
     return (
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
             {/* {sections && sections.data.map((item: any) => (
                 <div key={item.attributes.section_id}>
                     <h2>{item.attributes.SectionTitle}</h2>
@@ -57,10 +58,10 @@ export default function Sections() {
             ))} */}
 
             {data &&
-                    data?.map((item: TUsers) => (
-                        <div key={item._id}>
-                            <p>{ item.name }</p>
-                            <p>{ item.email }</p>
+                data?.map((item: TUsers) => (
+                    <div key={item._id}>
+                        <p>{item.name}</p>
+                        <p>{item.email}</p>
                     </div>
                 ))
             }
