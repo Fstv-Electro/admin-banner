@@ -1,6 +1,6 @@
 'use client'
 
-import mongoAPI from "@/app/api/mongoAPI";
+// import mongoAPI from "@/app/api/mongoAPI";
 import { fetchAll, fetchById } from "@/app/api/mongoAPI";
 // import sectionsAPI from "@/app/api/api";
 
