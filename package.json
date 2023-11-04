@@ -2,9 +2,7 @@
   "name": "admin-banner",
   "version": "0.1.0",
   "private": false,
-  "engines": {
-    "node": "20.09.0"
-  },
+  "engines": { "node": "18.x" },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
