@@ -28,7 +28,7 @@ import axios from "axios";
 
 // const baseURL='http://localhost:3000'
 const endpoint = '/api/users';
-const baseURL='http://fstv-electro.github.io/admin-banner'
+const baseURL='https://admin-banner.vercel.app/'
 
 
 
