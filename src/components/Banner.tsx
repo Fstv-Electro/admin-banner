@@ -1,6 +1,7 @@
 'use client'
 
 import mongoAPI from "@/app/api/mongoAPI";
+import { fetchAll, fetchById } from "@/app/api/mongoAPI";
 // import sectionsAPI from "@/app/api/api";
 
 
@@ -26,7 +27,7 @@ export default function Sections() {
   }, [])
     
     const fetchData = () => {
-        mongoAPI.getAll()
+        fetchAll()
             .then((data) => {
                 setData(data)
                 setLoading(false)
@@ -34,7 +35,7 @@ export default function Sections() {
     };
 
     const getUserById = async (id: string) => {
-        const res = await mongoAPI.getById(id);
+        const res = await fetchById(id);
         setUser(res);
     }
     // 65450f5bcf71e1106836cf7f

@@ -3,8 +3,8 @@ import axios from "axios";
 
 // sdsd
 const api = axios.create({
-    // baseURL: 'http://localhost:3000/api'
-    baseURL: 'http://fstv-electro.github.io/admin-banner/api'
+    baseURL: 'http://localhost:3000/api'
+    // baseURL: 'http://fstv-electro.github.io/admin-banner/api'
 });
 
 const mongoAPI = {
@@ -27,3 +27,28 @@ const mongoAPI = {
 };
 
 export default mongoAPI;
+
+const endpoint = '/api/users';
+const baseURL='http://fstv-electro.github.io/admin-banner'
+
+export const  fetchAll = async () => {
+    try {
+        const res = await fetch(`${baseURL}${endpoint}`);
+        const data = await res.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+export const  fetchById = async (id:string) => {
+    try {
+        const res = await fetch(`${baseURL}${endpoint}/${id}`);
+        const data = await res.json()
+        return data;
+    } catch (error) {
+        console.log(error)
+    }
+}
