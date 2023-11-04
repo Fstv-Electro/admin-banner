@@ -1,7 +1,10 @@
 {
   "name": "admin-banner",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "engines": {
+    "node": "20.09.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,7 +15,6 @@
     "axios": "^1.6.0",
     "mongoose": "^8.0.0",
     "next": "14.0.0",
-    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18"
   },
